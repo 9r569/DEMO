@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#351321">
+  <meta name="description" content="A small installable MUST Venue Finder demo.">
+  <title>MUST Venue Finder — Demo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="MUST Venue Finder home">
+      <span class="brand-mark">M</span>
+      <span><strong>MUST Finder</strong><small>Campus guide</small></span>
+    </a>
+    <button class="install-btn" id="installBtn" hidden>Install</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">MUST · MBEYA CAMPUS</span>
+      <h1>Find your<br><em>destination.</em></h1>
+      <p>Find buildings, rooms and useful places around campus.</p>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search a venue..." aria-label="Search a venue">
+        <button id="searchBtn">Search</button>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="section-heading">
+        <div><span class="eyebrow">EXPLORE</span><h2>Browse buildings</h2></div>
+        <a href="#buildings">See all</a>
+      </div>
+      <div class="chips" aria-label="Building categories">
+        <button class="chip active">All</button><button class="chip">Academic</button>
+        <button class="chip">Library</button><button class="chip">Workshop</button>
+      </div>
+      <div class="building-list" id="buildings">
+        <article class="building-card">
+          <div class="building-art academic"><span>01</span><b>ACADEMIC</b></div>
+          <div class="building-info"><div><h3>Academic Building</h3><p>Teaching rooms and offices</p></div><span class="arrow">↗</span></div>
+        </article>
+        <article class="building-card">
+          <div class="building-art library"><span>02</span><b>LIBRARY</b></div>
+          <div class="building-info"><div><h3>Dr. Magufuli Library</h3><p>Study spaces and resources</p></div><span class="arrow">↗</span></div>
+        </article>
+        <article class="building-card">
+          <div class="building-art workshop"><span>03</span><b>WORKSHOP</b></div>
+          <div class="building-info"><div><h3>Workshop Building</h3><p>Workshops and laboratories</p></div><span class="arrow">↗</span></div>
+        </article>
+      </div>
+      <div class="map-preview"><div><span class="eyebrow">CAMPUS GUIDE</span><h2>Explore the campus map</h2><p>See where buildings are located.</p></div><div class="map-symbol">⌖</div></div>
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <a class="nav-item selected" href="#"><span>⌂</span><small>Home</small></a>
+    <a class="nav-item" href="#buildings"><span>▦</span><small>Buildings</small></a>
+    <a class="nav-item" href="#map"><span>⌖</span><small>Map</small></a>
+    <a class="nav-item" href="#saved"><span>♡</span><small>Saved</small></a>
+    <a class="nav-item" href="#settings"><span>⚙</span><small>Settings</small></a>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
